@@ -1,1 +1,505 @@
+//developing
+#include <iostream>
+#include <thread>
+#include <chrono>
+#include <random>
+using namespace std;
 
+class Than {
+public:
+    int food;
+    int drink;
+    int health;
+    int stamina;
+};
+Than Ingam;
+
+void Thanh1() {
+    for (int i = true; i == true;) {
+        std::this_thread::sleep_for(std::chrono::seconds(45));
+        Ingam.food = Ingam.food - 1;
+    }
+}
+
+void Thanh2() {
+    for (int i = true; i == true;) {
+        std::this_thread::sleep_for(std::chrono::seconds(46));
+        Ingam.drink = Ingam.drink - 1;
+    }
+}
+
+int main() {
+    Ingam.food = 100;
+    Ingam.drink = 50;
+    thread t1(Thanh1);
+    thread t2(Thanh2);
+    t1.detach();
+    t2.detach();
+
+    cout << "\r loading." << flush;
+    std::this_thread::sleep_for(std::chrono::milliseconds(2250));
+
+    long long bauxite_inventor = 0, KNO_inventor = 0, diamond_inventor = 0, copper_inventor = 0;
+    long long graphite_inventor = 0, coal_inventor = 0, stone_inventor = 0, meat = 0;
+    long long iron_inventor = 0, go_inventor = 0, sword_dura = 0, gun_dura = 0, ammor_inventor = 0;
+    long long bandage_inventor = 0, fruit_inventor = 0;
+    bool sword = false, gun = false, bandage = false, pickaxe = false, axe = false;
+    int w_hit = 0, b_hit = 0;
+
+    cout << "\r loading.." << flush;
+    std::this_thread::sleep_for(std::chrono::milliseconds(2250));
+
+    Ingam.health = 100;
+    Ingam.stamina = 50;
+    int choose = 0;
+    random_device so;
+    mt19937 quay(so());
+
+    cout << "\r loading..." << flush;
+    std::this_thread::sleep_for(std::chrono::milliseconds(2250));
+    cout << "\r done!        " << flush;
+    std::this_thread::sleep_for(std::chrono::milliseconds(500));
+    cout << endl << endl << endl;
+
+    cout << " TTTTTTTTTTTTT EEEEEEEEEE  RRRRRRR      MMMM          MMMM  IIIIII  NNNN   NN  AAA        LL " << endl;
+    std::this_thread::sleep_for(std::chrono::milliseconds(100));
+    cout << "     TTTTT     EE          RR     RR    MM  MM       MM MM    II    NN NN  NN  AA AA      LL " << endl;
+    std::this_thread::sleep_for(std::chrono::milliseconds(100));
+    cout << "     TTTTT     EEEEEEEEE   RR     RR    MM   MM    MM   MM    II    NN  NN NN  AA  AA     LL " << endl;
+    std::this_thread::sleep_for(std::chrono::milliseconds(100));
+    cout << "     TTTTT     EE          RRRRRRRR     MM    MM  MM    MM    II    NN   NNNN  AAAAAAA    LL " << endl;
+    std::this_thread::sleep_for(std::chrono::milliseconds(100));
+    cout << "     TTTTT     EE          RR   RRR     MM     MMMM     MM    II    NN    NNN  AA    AA   LL " << endl;
+    std::this_thread::sleep_for(std::chrono::milliseconds(100));
+    cout << "     TTTTT     EEEEEEEEEE  RR     RRR   MM      MM      MM  IIIIII  NN     NN  AA     AA  LLLLLLLLLLL " << endl;
+    std::this_thread::sleep_for(std::chrono::milliseconds(100));
+
+    cout << endl << endl;
+
+    cout << " FFFFFFFFFFF      OOOOOOOOOO     RRRRRRR     EEEEEEEEE     sSSSSSSS    TTTTTTTTTTTTT     " << endl;
+    std::this_thread::sleep_for(std::chrono::milliseconds(100));
+    cout << " FF             OO          OO   RR     RR   EE            SS              TTTT     " << endl;
+    std::this_thread::sleep_for(std::chrono::milliseconds(100));
+    cout << " FFFFFFFFFFF   OO            OO  RR     RR   EEEEEEEEE     SS              TTTT" << endl;
+    std::this_thread::sleep_for(std::chrono::milliseconds(100));
+    cout << " FF            OO            OO  RRRRRRR     EE            sSSSSSSSs       TTTT" << endl;
+    std::this_thread::sleep_for(std::chrono::milliseconds(100));
+    cout << " FF             OO          OO   RR    RRR   EE                   SS       TTTT " << endl;
+    std::this_thread::sleep_for(std::chrono::milliseconds(100));
+    cout << " FF               OOOOOOOOOO     RR     RRR  EEEEEEEEE     SSSSSSSSs       TTTT " << endl;
+    std::this_thread::sleep_for(std::chrono::milliseconds(100));
+
+    cout << "there is terminal forset" << endl;
+    std::this_thread::sleep_for(std::chrono::seconds(2));
+    cout << "you need survival at here not why" << endl;
+    std::this_thread::sleep_for(std::chrono::seconds(4));
+    cout << "FOOD" << flush;
+    std::this_thread::sleep_for(std::chrono::seconds(1));
+    cout << " - " << flush;
+    std::this_thread::sleep_for(std::chrono::seconds(1));
+    cout << "WATER" << flush;
+    std::this_thread::sleep_for(std::chrono::seconds(1));
+    cout << " - " << flush;
+    std::this_thread::sleep_for(std::chrono::seconds(1));
+    cout << "SUVIVAL" << endl;
+    std::this_thread::sleep_for(std::chrono::seconds(2));
+    cout << "|___---___---___---___---___---___---___---___|" << endl;
+    std::this_thread::sleep_for(std::chrono::seconds(2));
+
+    cout << "Hungry: " << Ingam.food << endl;
+    std::this_thread::sleep_for(std::chrono::milliseconds(300));
+    cout << "Drink: " << Ingam.drink << endl;
+    std::this_thread::sleep_for(std::chrono::milliseconds(300));
+    cout << "Health: " << Ingam.health << endl;
+    std::this_thread::sleep_for(std::chrono::milliseconds(300));
+    cout << "Stamina: " << Ingam.stamina << endl << endl;
+    std::this_thread::sleep_for(std::chrono::milliseconds(300));
+
+    std::this_thread::sleep_for(std::chrono::seconds(2));
+
+    for (int i = true; i == true;) {
+        cout << "What do you want to do?" << endl;
+        cout << "  1.cut down a tree (-5 stamina) / 2.ore mining (-10 stamini) / 3.killing wild animals (battle) / 4.picking wild fruit (-1 stamina) / 5.eat (+ hungry)/ 6.drink (+drink)/ 7.view metrics / 8.view inventory / 9.build /  10.searching for water / 11. sleep / 12. plus" << endl << endl;
+        cout << "(choose number) I want: ";
+        cin >> choose;
+        cout << endl << endl;
+
+        if (choose > 12 || choose <= 0) {
+            cout << "pleas choose again" << endl << endl;
+        } else {
+            switch (choose) {
+                case 1: {
+                    Ingam.stamina = Ingam.stamina - 5;
+                    cout << "\rcutting." << flush;
+                    std::this_thread::sleep_for(std::chrono::seconds(3));
+                    cout << "\rcutting.." << flush;
+                    std::this_thread::sleep_for(std::chrono::seconds(3));
+                    cout << "\rcutting..." << flush << endl;
+                    std::this_thread::sleep_for(std::chrono::seconds(4));
+
+                    uniform_int_distribution<int> so_luong(5, 15);
+                    int go = so_luong(quay);
+                    cout << "you got: " << go << " wood" << endl << endl;
+                    go_inventor += go;
+                    std::this_thread::sleep_for(std::chrono::seconds(2));
+                    break;
+                }
+
+                case 2: {
+                    Ingam.stamina = Ingam.stamina - 10;
+                    std::this_thread::sleep_for(std::chrono::seconds(2));
+                    cout << "\rmining." << flush;
+                    std::this_thread::sleep_for(std::chrono::seconds(5));
+                    cout << "\rmining.." << flush;
+                    std::this_thread::sleep_for(std::chrono::seconds(5));
+                    cout << "\rmining..." << flush;
+                    std::this_thread::sleep_for(std::chrono::seconds(5));
+                    cout << "\rmining...." << flush << endl;
+                    std::this_thread::sleep_for(std::chrono::seconds(5));
+
+                    int so_quang;
+                    if (pickaxe == true) {
+                        uniform_int_distribution<int> so_dao(10, 25);
+                        so_quang = so_dao(quay);
+                    } else {
+                        uniform_int_distribution<int> so_dao(3, 10);
+                        so_quang = so_dao(quay);
+                    }
+
+                    uniform_int_distribution<int> may_man(1, 70);
+                    int may = may_man(quay);
+
+                    if (may >= 1 && may <= 2) {
+                        cout << "you got " << so_quang << " diamond" << endl << endl;
+                        diamond_inventor += so_quang;
+                    } else if (may >= 3 && may <= 5) {
+                        cout << "you got " << so_quang << " KNO3" << endl << endl;
+                        KNO_inventor += so_quang;
+                    } else if (may >= 6 && may <= 10) {
+                        cout << "you got " << so_quang << " bauxite" << endl << endl;
+                        bauxite_inventor += so_quang;
+                    } else if (may >= 11 && may <= 20) {
+                        cout << "you got " << so_quang << " graphite" << endl << endl;
+                        graphite_inventor += so_quang;
+                    } else if (may >= 21 && may <= 35) {
+                        cout << "you got " << so_quang << " coal" << endl << endl;
+                        coal_inventor += so_quang;
+                    } else if (may >= 36 && may <= 50) {
+                        cout << "you got " << so_quang << " iron ore" << endl << endl;
+                        iron_inventor += so_quang;
+                    } else if (may >= 51 && may <= 70) {
+                        cout << "you got " << so_quang << " stone" << endl << endl;
+                        stone_inventor += so_quang;
+                    }
+                    break;
+                }
+
+                case 3: {
+                    uniform_int_distribution<int> chon_quai(1, 3);
+                    int battle = chon_quai(quay);
+
+                    if (battle == 1) {
+                        int bhea = 35;
+                        cout << "you will fight with... " << flush;
+                        std::this_thread::sleep_for(std::chrono::seconds(3));
+                        cout << " A Bunny !" << endl;
+                        std::this_thread::sleep_for(std::chrono::milliseconds(800));
+                        cout << " damage : 5" << endl;
+                        std::this_thread::sleep_for(std::chrono::milliseconds(800));
+                        cout << "bunny health: " << bhea << endl;
+                        std::this_thread::sleep_for(std::chrono::milliseconds(800));
+                        cout << "your health: " << Ingam.health << endl;
+std::this_thread::sleep_for(std::chrono::milliseconds(500));
+cout << "your stamina: " << Ingam.stamina << endl;
+std::this_thread::sleep_for(std::chrono::milliseconds(500));
+for (bool x = false; x == false;) {
+cout << "choose : 1. hit / 2. treatment / 3. !!Nigerundayo!!" << endl;
+cout << "choose: ";
+int choose_bt;
+cin >> choose_bt;
+cout << endl << endl;
+if (choose_bt == 1) {
+cout << "1. punch (damage 5 | -5 stamina) / 2. sword (damage 15 | -10 stamina) / 3. gun (damage 35 | -5 stamina | -2 ammor)" << endl;
+int hit;
+cout << "choose hit type : ";
+cin >> hit;
+cout << endl << endl;
+if (hit == 1 && bhea >= 0) {
+if (Ingam.stamina >= 5) {
+bhea -= 5;
+Ingam.stamina -= 5;
+cout << " you hit the bunny 5 damage, your stamina: " << Ingam.stamina << " and the health of bunny: " << bhea << endl << endl;
+} else {
+cout << "your stamina not enough stamina please choose again" << endl << endl;
+}
+} else if (hit == 2 && bhea >= 0) {
+if (sword == true && Ingam.stamina >= 10) {
+bhea -= 15;
+Ingam.stamina -= 10;
+cout << " you hit the bunny 15 damage, your stamina: " << Ingam.stamina << " and the health of bunny: " << bhea << endl << endl;
+} else {
+cout << "your stamina not enough stamina / not have sword please choose again" << endl << endl;
+}
+} else if (hit == 3 && bhea >= 0) {
+if (Ingam.stamina >= 5 && gun == true && ammor_inventor >= 2) {
+bhea -= 35;
+Ingam.stamina -= 5;
+ammor_inventor -= 2;
+cout << " you hit the bunny 35 damage, your stamina: " << Ingam.stamina << " and the health of bunny: " << bhea << endl << endl;
+} else {
+cout << "your stamina not enough stamina / ammor / not have gun please choose again" << endl << endl;
+}
+} else {
+cout << "not found... choose again" << endl << endl;
+}
+} else if (choose_bt == 2 && bhea >= 0) {
+if (bandage == true && Ingam.health + 15 > 100) {
+cout << "\r recovering.  (" << flush;
+std::this_thread::sleep_for(std::chrono::milliseconds(1500));
+Ingam.health = 100;
+std::this_thread::sleep_for(std::chrono::milliseconds(1500));
+cout << "\r done!                                          " << endl << endl;
+} else if (bandage == true) {
+Ingam.health += 5;
+cout << "\r recovering.  (" << Ingam.health << ")" << flush;
+std::this_thread::sleep_for(std::chrono::milliseconds(1500));
+Ingam.health += 5;
+cout << "\r recovering.. (" << Ingam.health << ")" << flush;
+std::this_thread::sleep_for(std::chrono::milliseconds(1500));
+Ingam.health += 5;
+cout << "\r recovering...(" << Ingam.health << ")" << flush;
+std::this_thread::sleep_for(std::chrono::milliseconds(1500));
+cout << "\r done!                                          " << endl << endl;
+} else {
+cout << "You don't have any bandages." << endl << endl;
+}
+} else if (choose_bt == 3 && bhea >= 0) {
+cout << "NIGERUNDAYO!!!" << flush << endl;
+std::this_thread::sleep_for(std::chrono::milliseconds(250));
+cout << "your health: " << Ingam.health << endl << flush;
+std::this_thread::sleep_for(std::chrono::milliseconds(250));
+cout << "your stamina: " << Ingam.stamina << endl << flush;
+std::this_thread::sleep_for(std::chrono::milliseconds(250));
+x = true;
+} else {
+cout << "not found... choose again" << endl << endl;
+}
+if (bhea <= 0) {
+cout << "congratulations!, the bunny is die! You have 5 meat!" << endl << endl;
+meat += 5;
+x = true;
+break;
+}
+}
+} else if (battle == 2) {
+int whea = 50;
+cout << "you will fight with... " << flush;
+std::this_thread::sleep_for(std::chrono::seconds(3));
+cout << " A Wolf !" << endl;
+std::this_thread::sleep_for(std::chrono::milliseconds(800));
+cout << " damage : 15" << endl;
+std::this_thread::sleep_for(std::chrono::milliseconds(800));
+cout << "wolf health: " << whea << endl;
+std::this_thread::sleep_for(std::chrono::milliseconds(800));
+cout << "your health: " << Ingam.health << endl;
+std::this_thread::sleep_for(std::chrono::milliseconds(500));
+cout << "your stamina: " << Ingam.stamina << endl;
+std::this_thread::sleep_for(std::chrono::milliseconds(500));
+for (bool x = false; x == false;) {
+cout << "choose : 1. hit / 2. treatment / 3. !!Nigerundayo!!" << endl;
+cout << "choose: ";
+int choose_bt;
+cin >> choose_bt;
+cout << endl << endl;
+if (choose_bt == 1) {
+cout << "1. punch (damage 5 | -5 stamina) / 2. sword (damage 15 | -10 stamina) / 3. gun (damage 35 | -5 stamina | -2 ammor)" << endl;
+int hit;
+cout << "choose hit type : ";
+cin >> hit;
+cout << endl << endl;
+if (hit == 1 && whea >= 0) {
+if (Ingam.stamina >= 5) {
+whea -= 5;
+Ingam.stamina -= 5;
+cout << " you hit the wolf 5 damage, your stamina: " << Ingam.stamina << " and the health of wolf: " << whea << endl << endl;
+} else {
+cout << "your stamina not enough stamina please choose again" << endl << endl;
+}
+} else if (hit == 2 && whea >= 0) {
+if (sword == true && Ingam.stamina >= 10) {
+whea -= 15;
+Ingam.stamina -= 10;
+cout << " you hit the wolf 15 damage, your stamina: " << Ingam.stamina << " and the health of wolf: " << whea << endl << endl;
+} else {
+cout << "your stamina not enough stamina / not have sword please choose again" << endl << endl;
+}
+} else if (hit == 3 && whea >= 0) {
+if (Ingam.stamina >= 5 && gun == true && ammor_inventor >= 2) {
+whea -= 35;
+Ingam.stamina -= 5;
+ammor_inventor -= 2;
+cout << " you hit the wolf 35 damage, your stamina: " << Ingam.stamina << " and the health of wolf: " << whea << endl << endl;
+} else {
+cout << "your stamina not enough stamina / ammor / not have gun please choose again" << endl << endl;
+}
+} else {
+cout << "not found... choose again" << endl << endl;
+}
+} else if (choose_bt == 2 && whea >= 0) {
+if (bandage == true && Ingam.health + 15 > 100) {
+cout << "\r recovering.  (" << flush;
+std::this_thread::sleep_for(std::chrono::milliseconds(1500));
+Ingam.health = 100;
+std::this_thread::sleep_for(std::chrono::milliseconds(1500));
+cout << "\r done!                                          " << endl << endl;
+} else if (bandage == true) {
+Ingam.health += 5;
+cout << "\r recovering.  (" << Ingam.health << ")" << flush;
+std::this_thread::sleep_for(std::chrono::milliseconds(1500));
+Ingam.health += 5;
+cout << "\r recovering.. (" << Ingam.health << ")" << flush;
+std::this_thread::sleep_for(std::chrono::milliseconds(1500));
+Ingam.health += 5;
+cout << "\r recovering...(" << Ingam.health << ")" << flush;
+std::this_thread::sleep_for(std::chrono::milliseconds(1500));
+cout << "\r done!                                          " << endl << endl;
+} else {
+cout << "You don't have any bandages." << endl << endl;
+}
+} else if (choose_bt == 3 && whea >= 0) {
+cout << "NIGERUNDAYO!!!" << flush << endl;
+std::this_thread::sleep_for(std::chrono::milliseconds(250));
+cout << "your health: " << Ingam.health << endl << flush;
+std::this_thread::sleep_for(std::chrono::milliseconds(250));
+cout << "your stamina: " << Ingam.stamina << endl << flush;
+std::this_thread::sleep_for(std::chrono::milliseconds(250));
+x = true;
+} else {
+cout << "not found... choose again" << endl << endl;
+}
+if (whea <= 0) {
+cout << "congratulations!, the wolf is die! You have 15 meat!" << endl << endl;
+meat += 15;
+x = true;
+break;
+}
+uniform_int_distribution<int> hitting (1, 5);
+w_hit = hitting(quay);
+if (w_hit >= 2) {
+cout << "the wolf is hit you 15 damage" << endl;
+Ingam.health -= 15;
+cout << "your health: " << Ingam.health << endl << endl;
+}
+}
+} else if (battle == 3) {
+int behea = 140;
+cout << "you will fight with... " << flush;
+std::this_thread::sleep_for(std::chrono::seconds(3));
+cout << " A Bear !" << endl;
+std::this_thread::sleep_for(std::chrono::milliseconds(800));
+cout << " damage : 30" << endl;
+std::this_thread::sleep_for(std::chrono::milliseconds(800));
+cout << "bear health: " << behea << endl;
+std::this_thread::sleep_for(std::chrono::milliseconds(800));
+cout << "your health: " << Ingam.health << endl;
+std::this_thread::sleep_for(std::chrono::milliseconds(500));
+cout << "your stamina: " << Ingam.stamina << endl;
+std::this_thread::sleep_for(std::chrono::milliseconds(500));
+for (bool x = false; x == false;) {
+cout << "choose : 1. hit / 2. treatment / 3. !!Nigerundayo!!" << endl;
+cout << "choose: ";
+int choose_bt;
+cin >> choose_bt;
+cout << endl << endl;
+if (choose_bt == 1) {
+cout << "1. punch (damage 5 | -5 stamina) / 2. sword (damage 15 | -10 stamina) / 3. gun (damage 35 | -5 stamina | -2 ammor)" << endl;
+int hit;
+cout << "choose hit type : ";
+cin >> hit;
+cout << endl << endl;
+if (hit == 1 && behea >= 0) {
+if (Ingam.stamina >= 5) {
+behea -= 5;
+Ingam.stamina -= 5;
+cout << " you hit the bear 5 damage, your stamina: " << Ingam.stamina << " and the health of bear: " << behea << endl << endl;
+} else {
+cout << "your stamina not enough stamina please choose again" << endl << endl;
+}
+} else if (hit == 2 && behea >= 0) {
+if (sword == true && Ingam.stamina >= 10) {
+behea -= 15;
+Ingam.stamina -= 10;
+cout << " you hit the bear 15 damage, your stamina: " << Ingam.stamina << " and the health of bear: " << behea << endl << endl;
+} else {
+cout << "your stamina not enough stamina / not have sword please choose again" << endl << endl;
+}
+} else if (hit == 3 && behea >= 0) {
+if (Ingam.stamina >= 5 && gun == true && ammor_inventor >= 2) {
+behea -= 35;
+Ingam.stamina -= 5;
+ammor_inventor -= 2;
+cout << " you hit the bear 35 damage, your stamina: " << Ingam.stamina << " and the health of bear: " << behea << endl << endl;
+} else {
+cout << "your stamina not enough stamina / ammor / not have gun please choose again" << endl << endl;
+}
+} else {
+cout << "not found... choose again" << endl << endl;
+}
+} else if (choose_bt == 2 && behea >= 0) {
+if (bandage == true && Ingam.health + 15 > 100) {
+cout << "\r recovering.  (" << flush;
+std::this_thread::sleep_for(std::chrono::milliseconds(1500));
+Ingam.health = 100;
+std::this_thread::sleep_for(std::chrono::milliseconds(1500));
+cout << "\r done!                                          " << endl << endl;
+} else if (bandage == true) {
+Ingam.health += 5;
+cout << "\r recovering.  (" << Ingam.health << ")" << flush;
+std::this_thread::sleep_for(std::chrono::milliseconds(1500));
+Ingam.health += 5;
+cout << "\r recovering.. (" << Ingam.health << ")" << flush;
+std::this_thread::sleep_for(std::chrono::milliseconds(1500));
+Ingam.health += 5;
+cout << "\r recovering...(" << Ingam.health << ")" << flush;
+std::this_thread::sleep_for(std::chrono::milliseconds(1500));
+cout << "\r done!                                          " << endl << endl;
+} else {
+cout << "You don't have any bandages." << endl << endl;
+}
+} else if (choose_bt == 3 && behea >= 0) {
+cout << "NIGERUNDAYO!!!" << flush << endl;
+std::this_thread::sleep_for(std::chrono::milliseconds(250));
+cout << "your health: " << Ingam.health << endl << flush;
+std::this_thread::sleep_for(std::chrono::milliseconds(250));
+cout << "your stamina: " << Ingam.stamina << endl << flush;
+std::this_thread::sleep_for(std::chrono::milliseconds(250));
+x = true;
+} else {
+cout << "not found... choose again" << endl << endl;
+}
+if (behea <= 0) {
+cout << "congratulations!, the bear is die! You have 35 meat!" << endl << endl;
+meat += 35;
+x = true;
+break;
+}
+uniform_int_distribution<int> bear_hitting (1, 100);
+b_hit = bear_hitting(quay);
+if (b_hit <= 85) {
+cout << "the bear is hit you 30 damage" << endl;
+Ingam.health -= 30;
+cout << "your health: " << Ingam.health << endl << endl;
+    // được xắp xếp lại, hơi nhìn khó chịu.
+                         }
+                     }
+                     break;
+                 } // case 3
+             } // switch
+         }
+     }
+     return 0;
+ }
+}
+
+// bauxite_inventor KNO_inventor diamond_inventor graphite_inventor coal_inventor stone_inventor iron_inventor go_inventor bandage_inventor copper_inventor ammor_inventor fruit_inventor meat sword_dura gun_dura sword gun bandage pickaxe axe w_hit b_hit choose so quay so_luong go so_quang so_dao may_man may chon_quai battle bhea whea behea x choose_bt hit hitting bear_hitting
+// Text-based Adventure 
