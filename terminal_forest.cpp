@@ -42,7 +42,7 @@ int main() {
     long long bauxite_inventor = 0, KNO_inventor = 0, diamond_inventor = 0, copper_inventor = 0;
     long long graphite_inventor = 0, coal_inventor = 0, stone_inventor = 0, meat = 0;
     long long iron_inventor = 0, go_inventor = 0, sword_dura = 0, gun_dura = 0, ammor_inventor = 0;
-    long long bandage_inventor = 0, fruit_inventor = 0;
+    long long bandage_inventor = 0,  pull_inventor = 0, may_inventor = 0, mus_inventor = 0,   mul_inventor = 0, ras_inventor = 0;
     bool sword = false, gun = false, bandage = false, pickaxe = false, axe = false;
     int w_hit = 0, b_hit = 0;
 
@@ -197,7 +197,6 @@ int main() {
                 case 3: {
                     uniform_int_distribution<int> chon_quai(1, 3);
                     int battle = chon_quai(quay);
-
                     if (battle == 1) {
                         int bhea = 35;
                         cout << "you will fight with... " << flush;
@@ -471,7 +470,7 @@ cout << "NIGERUNDAYO!!!" << flush << endl;
 std::this_thread::sleep_for(std::chrono::milliseconds(250));
 cout << "your health: " << Ingam.health << endl << flush;
 std::this_thread::sleep_for(std::chrono::milliseconds(250));
-cout << "your stamina: " << Ingam.stamina << endl << flush;
+ cout << "your stamina: " << Ingam.stamina << endl << flush;
 std::this_thread::sleep_for(std::chrono::milliseconds(250));
 x = true;
 } else {
@@ -492,14 +491,55 @@ cout << "your health: " << Ingam.health << endl << endl;
     // được xắp xếp lại, hơi nhìn khó chịu.
                          }
                      }
-                     break;
-                 } // case 3
-             } // switch
-         }
-     }
-     return 0;
- }
-}
+                 } 
+                 break;
 
-// bauxite_inventor KNO_inventor diamond_inventor graphite_inventor coal_inventor stone_inventor iron_inventor go_inventor bandage_inventor copper_inventor ammor_inventor fruit_inventor meat sword_dura gun_dura sword gun bandage pickaxe axe w_hit b_hit choose so quay so_luong go so_quang so_dao may_man may chon_quai battle bhea whea behea x choose_bt hit hitting bear_hitting
-// Text-based Adventure 
+            }
+                 case 4: {
+
+                    std::this_thread::sleep_for(std::chrono::milliseconds(2500));
+                    cout << "\r find and collecting." << flush;
+                    std::this_thread::sleep_for(std::chrono::milliseconds(2500));
+                    cout << "\r find and collecting.." << flush;
+                    std::this_thread::sleep_for(std::chrono::milliseconds(2500));
+                    cout << "\r find and collecting..." << flush;
+                    std::this_thread::sleep_for(std::chrono::milliseconds(2500));
+                    cout << "\r finded !                   " << endl;
+                     
+
+                    uniform_int_distribution <int> loai_trai (1, 100);
+                    int kieu_loai = loai_trai(quay);
+                    uniform_int_distribution <int> sl (5, 25);
+                    int so_trai = sl(quay);
+
+                    if (kieu_loai  >= 1 && kieu_loai <= 50) {
+                        cout << "you collect "<< so_trai << " Raspberries";
+                        ras_inventor += so_trai;
+                    } else if ( kieu_loai > 50 && kieu_loai <= 75) {
+                        cout << "you collect "<<so_trai<<"  Mulberries";
+                         mul_inventor += so_trai;
+                    } else if (kieu_loai > 75 && kieu_loai <= 85) {
+                        cout << "you collect " << so_trai << " Muscadine / Fox Grapes";
+                         mus_inventor += so_trai;
+                    } else if ( kieu_loai > 85 && kieu_loai < 95) {
+                        cout << "you collect "<< so_trai << " Mayhaws"; // Táo gai /  táo dai ? :]]]
+                         may_inventor += so_trai;
+                    } else if (kieu_loai >= 95) {
+                        cout << "you collect "<< so_trai << " Lingonberries / Mountain Cranberries";
+                         pull_inventor += so_trai;
+                    }
+
+                    cout << endl << endl;
+                    Ingam.stamina -= 1;
+                    break;
+             
+                 }
+         } //switch
+}
+// long long pull_inventor  long long May_inventor  long long mus_inventor  long long mul_inventor  long long ras_inventor
+// Ingam.health  Ingam.stamina  Ingam.food  Ingam.drink bauxite_inventor KNO_inventor diamond_inventor graphite_inventor coal_inventor stone_inventor iron_inventor go_inventor bandage_inventor copper_inventor ammor_inventor fruit_inventor meat sword_dura gun_dura sword gun bandage pickaxe axe w_hit b_hit choose so quay so_luong go so_quang so_dao may_man may chon_quai battle bhea whea behea x choose_bt hit hitting bear_hitting
+// Text-based Adventure
+// joke: my friend (Thang) love furry C:
+    }
+    return 0;
+}
