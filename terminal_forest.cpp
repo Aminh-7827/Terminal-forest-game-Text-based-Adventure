@@ -40,9 +40,9 @@ int main() {
     std::this_thread::sleep_for(std::chrono::milliseconds(2250));
 
     long long bauxite_inventor = 0, KNO_inventor = 0, diamond_inventor = 0, copper_inventor = 0;
-    long long graphite_inventor = 0, coal_inventor = 0, stone_inventor = 0, meat = 0;
+    long long graphite_inventor = 0, coal_inventor = 0, stone_inventor = 0, meat = 0, cm_inventor = 0;
     long long iron_inventor = 0, go_inventor = 0, sword_dura = 0, gun_dura = 0, ammor_inventor = 0;
-    long long bandage_inventor = 0,  pull_inventor = 0, may_inventor = 0, mus_inventor = 0,   mul_inventor = 0, ras_inventor = 0;
+    long long bandage_inventor = 0,  ling_inventor = 0, may_inventor = 0, mus_inventor = 0,   mul_inventor = 0, ras_inventor = 0;
     bool sword = false, gun = false, bandage = false, pickaxe = false, axe = false;
     int w_hit = 0, b_hit = 0;
 
@@ -526,7 +526,7 @@ cout << "your health: " << Ingam.health << endl << endl;
                          may_inventor += so_trai;
                     } else if (kieu_loai >= 95) {
                         cout << "you collect "<< so_trai << " Lingonberries / Mountain Cranberries";
-                         pull_inventor += so_trai;
+                         ling_inventor += so_trai;
                     }
 
                     cout << endl << endl;
@@ -534,12 +534,144 @@ cout << "your health: " << Ingam.health << endl << endl;
                     break;
              
                  }
+                 case 5: {
+                    cout << "you have some thing to eat :"<< endl << endl;
+                    std::this_thread::sleep_for(std::chrono::milliseconds(900));
+                    cout << "1.meat ( +15 hungry , -5 health) " << meat << endl << endl;
+                    std::this_thread::sleep_for(std::chrono::milliseconds(900));
+                    cout << "2.Lingonberries / Mountain Cranberries (+1 hungry) "<<ling_inventor << endl << endl;
+                    std::this_thread::sleep_for(std::chrono::milliseconds(900));
+                    cout <<"3.Mayhaws (+2 hungry)"<< may_inventor << endl;
+                    std::this_thread::sleep_for(std::chrono::milliseconds(900));
+                    cout << "4.Muscadine / Fox Grapes (+ 5 hungry) "<<mus_inventor << endl << endl;
+                    std::this_thread::sleep_for(std::chrono::milliseconds(900));
+                    cout << "5.Mulberries (+5 hungry, + 1 drink) "<<mul_inventor << endl << endl;
+                    std::this_thread::sleep_for(std::chrono::milliseconds(900));
+                    cout<<"6.Raspberries (+ 5 hungry + 5 stamina) "<<ras_inventor << endl << endl;
+                    std::this_thread::sleep_for(std::chrono::milliseconds(900));
+                    cout <<"7.Cooked meat (+ 20 hungry, +10 stamina, + 5 health )"<< cm_inventor << endl << endl;
+                    std::this_thread::sleep_for(std::chrono::milliseconds(900));
+                    int choose_eat;
+                    std::this_thread::sleep_for(std::chrono::milliseconds(900));
+                    cout << "I want: " ;
+                    cin >> choose_eat;
+                    int tsm;
+                    int cmw;
+                    cout << endl;
+
+                    switch (choose_eat) {
+                        
+                        case 1 :{
+                            tsm = meat;
+                            cout << "how many?: ";
+                            cin >> cmw;
+                            if (tsm <= 0 || tsm - cmw < 0 ) {
+                                cout << " you not have enought it." << endl; 
+                            } else if ( tsm > 0 ) {
+                                cout << "you eat " << cmw << " meat";
+                                meat -= cmw;
+                                Ingam.food += 10 * cmw;
+                                Ingam.health -= 5 * cmw;
+                            }
+                            break;
+                        }
+                        case 2 :{
+                            tsm = ling_inventor;
+                            cout << "how many?: ";
+                            cin >> cmw;
+                            if (tsm <= 0 || tsm - cmw < 0 ) {
+                                cout << " you not have enought it." << endl; 
+                            } else if ( tsm > 0 ) {
+                                cout << "you eat " << cmw << " Lingonberries / Mountain Cranberries";
+                                ling_inventor -= cmw;
+                                Ingam.food += cmw;
+                                
+                            }
+                            break;
+                        }
+                        case 3 :{
+                            tsm = may_inventor;
+                            cout << "how many?: ";
+                            cin >> cmw;
+                            if (tsm <= 0 || tsm - cmw < 0 ) {
+                                cout << " you not have enought it." << endl; 
+                            } else if ( tsm > 0 ) {
+                                cout << "you eat " << cmw << " Mayhaws";
+                                 may_inventor -= cmw;
+                                 Ingam.food += 2 * cmw;
+                                break;
+                            }
+                            break;
+                        }
+                        case 4 :{
+                            tsm = mus_inventor;
+                            cout << "how many?: ";
+                            cin >> cmw;
+                            if (tsm <= 0 || tsm - cmw < 0 ) {
+                                cout << " you not have enought it." << endl; 
+                            } else if ( tsm > 0 ) {
+                                cout << "you eat " << cmw << " Muscadine / Fox Grapes";
+                                mus_inventor -= cmw;
+                                Ingam.food += 5 * cmw;
+                            }
+                            break;
+                        }
+                        case 5 :{
+                            tsm = mul_inventor;
+                            cout << "(not 0 or <) how many?: ";
+                            cin >> cmw;
+                            if (tsm <= 0 || tsm - cmw < 0 ) {
+                                cout << " you not have enought it." << endl; 
+                            } else if ( tsm > 0 ) {
+                                cout << "you eat " << cmw << " Mulberries";
+                                mul_inventor -= cmw;
+                                Ingam.food += 5 * cmw;
+                                Ingam.drink += cmw;
+                            }
+                            break;
+                        }
+                        case  6:{
+                            tsm = ras_inventor;
+                            cout << "how many?: ";
+                            cin >> cmw;
+                            if (tsm <= 0 || tsm - cmw < 0 ) {
+                                cout << " you not have enought it." << endl; 
+                            } else if ( tsm > 0 ) {
+                                cout << "you eat " << cmw << " Raspberries";
+                                ras_inventor -= cmw;
+                                Ingam.food += 5 * cmw;
+                                Ingam.stamina += 5 * cmw;
+                            }
+                            break;
+                        }
+                        case  7:{
+                            tsm = cm_inventor;
+                            cout << "how many?: ";
+                            cin >> cmw;
+                            if (tsm <= 0 || tsm - cmw < 0 ) {
+                                cout << " you not have enought it." << endl; 
+                            } else if ( tsm > 0 ) {
+                                cout << "you eat " << cmw << " Cooked meat";
+                                cm_inventor -= cmw;
+                                Ingam.food += 20 * cmw;
+                                Ingam.drink += 10 * cmw;
+                                Ingam.health += 5  * cmw;
+                            }
+                            break;
+                        }
+
+                        cout << endl << "your hungry: "<< Ingam.food << endl << endl;
+                         
+                    }
+                 } // case eat;
+                 // develop drink water!!!
+
+             }
          } //switch
 }
-// long long pull_inventor  long long May_inventor  long long mus_inventor  long long mul_inventor  long long ras_inventor
+// long long ling_inventor  long long may_inventor  long long mus_inventor  long long mul_inventor  long long ras_inventor   meat  cm_inventor
 // Ingam.health  Ingam.stamina  Ingam.food  Ingam.drink bauxite_inventor KNO_inventor diamond_inventor graphite_inventor coal_inventor stone_inventor iron_inventor go_inventor bandage_inventor copper_inventor ammor_inventor fruit_inventor meat sword_dura gun_dura sword gun bandage pickaxe axe w_hit b_hit choose so quay so_luong go so_quang so_dao may_man may chon_quai battle bhea whea behea x choose_bt hit hitting bear_hitting
 // Text-based Adventure
 // joke: my friend (Thang) love furry C:
-    }
-    return 0;
+return 0;
 }
