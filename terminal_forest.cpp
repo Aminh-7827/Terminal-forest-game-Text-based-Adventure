@@ -39,9 +39,9 @@ int main() {
     cout << "\r loading." << flush;
     std::this_thread::sleep_for(std::chrono::milliseconds(2250));
 
-    long long bauxite_inventor = 0, KNO_inventor = 0, diamond_inventor = 0, copper_inventor = 0;
-    long long graphite_inventor = 0, coal_inventor = 0, stone_inventor = 0, meat = 0, cm_inventor = 0;
-    long long iron_inventor = 0, go_inventor = 0, sword_dura = 0, gun_dura = 0, ammor_inventor = 0;
+    long long bauxite_inventor = 0, kno_inventor = 0, diamond_inventor = 0, copper_inventor = 0;
+    long long graphite_inventor = 0, coal_inventor = 0, stone_inventor = 0, meat = 0, cm_inventor = 0, axe_dura = 0;
+    long long iron_inventor = 0, go_inventor = 0, sword_dura = 0, gun_dura = 0, ammor_inventor = 0 , water_mc = 0 , band_inventor = 0;
     long long bandage_inventor = 0,  ling_inventor = 0, may_inventor = 0, mus_inventor = 0,   mul_inventor = 0, ras_inventor = 0;
     bool sword = false, gun = false, bandage = false, pickaxe = false, axe = false;
     int w_hit = 0, b_hit = 0;
@@ -166,7 +166,7 @@ int main() {
                         so_quang = so_dao(quay);
                     }
 
-                    uniform_int_distribution<int> may_man(1, 70);
+                    uniform_int_distribution<int> may_man(1, 100);
                     int may = may_man(quay);
 
                     if (may >= 1 && may <= 2) {
@@ -174,7 +174,7 @@ int main() {
                         diamond_inventor += so_quang;
                     } else if (may >= 3 && may <= 5) {
                         cout << "you got " << so_quang << " KNO3" << endl << endl;
-                        KNO_inventor += so_quang;
+                        kno_inventor += so_quang;
                     } else if (may >= 6 && may <= 10) {
                         cout << "you got " << so_quang << " bauxite" << endl << endl;
                         bauxite_inventor += so_quang;
@@ -190,6 +190,9 @@ int main() {
                     } else if (may >= 51 && may <= 70) {
                         cout << "you got " << so_quang << " stone" << endl << endl;
                         stone_inventor += so_quang;
+                    } else if (may > 70 && may <= 100) {
+                        cout << "you got " << so_quang << " copper" << endl << endl;
+                        copper_inventor += so_quang;
                     }
                     break;
                 }
@@ -203,7 +206,7 @@ int main() {
                         std::this_thread::sleep_for(std::chrono::seconds(3));
                         cout << " A Bunny !" << endl;
                         std::this_thread::sleep_for(std::chrono::milliseconds(800));
-                        cout << " damage : 5" << endl;
+                        cout << " damage : 0" << endl;
                         std::this_thread::sleep_for(std::chrono::milliseconds(800));
                         cout << "bunny health: " << bhea << endl;
                         std::this_thread::sleep_for(std::chrono::milliseconds(800));
@@ -289,6 +292,10 @@ meat += 5;
 x = true;
 break;
 }
+if ( Ingam.health <= 0) {
+                        cout << "you die...";
+                        i = false;
+                     }
 }
 } else if (battle == 2) {
 int whea = 50;
@@ -389,6 +396,10 @@ cout << "the wolf is hit you 15 damage" << endl;
 Ingam.health -= 15;
 cout << "your health: " << Ingam.health << endl << endl;
 }
+if ( Ingam.health <= 0) {
+                        cout << "you die...";
+                        i = false;
+                     }
 }
 } else if (battle == 3) {
 int behea = 140;
@@ -490,7 +501,13 @@ Ingam.health -= 30;
 cout << "your health: " << Ingam.health << endl << endl;
     // được xắp xếp lại, hơi nhìn khó chịu.
                          }
+                         if ( Ingam.health <= 0) {
+                        cout << "you die...";
+                        i = false;
                      }
+                     }
+                     }
+
                  } 
                  break;
 
@@ -550,6 +567,8 @@ cout << "your health: " << Ingam.health << endl << endl;
                     cout<<"6.Raspberries (+ 5 hungry + 5 stamina) "<<ras_inventor << endl << endl;
                     std::this_thread::sleep_for(std::chrono::milliseconds(900));
                     cout <<"7.Cooked meat (+ 20 hungry, +10 stamina, + 5 health )"<< cm_inventor << endl << endl;
+                    std::this_thread::sleep_for(std::chrono::milliseconds(900));
+                    cout <<"8. no " << endl << endl;
                     std::this_thread::sleep_for(std::chrono::milliseconds(900));
                     int choose_eat;
                     std::this_thread::sleep_for(std::chrono::milliseconds(900));
@@ -658,19 +677,201 @@ cout << "your health: " << Ingam.health << endl << endl;
                                 Ingam.health += 5  * cmw;
                             }
                             break;
+                        } 
+                        case 8 : {
+                            cout << endl;
+                            break;
                         }
 
                         cout << endl << "your hungry: "<< Ingam.food << endl << endl;
+                        if ( Ingam.food > 100 ) {
+                            Ingam.food = 100;
+                        }
+                        if ( Ingam.drink > 100 ) {
+                            Ingam.drink = 100;
+                        }
+                        if ( Ingam.stamina > 100 ) {
+                            Ingam.stamina = 100;
+                        }
+                        if ( Ingam.health > 100 ) {
+                            Ingam.health = 100;
+                        }
+
+
+                        if ( Ingam.health <= 0) {
+                        cout << "you die...";
+                        i = false;
+                     }
                          
+                        break;
                     }
                  } // case eat;
-                 // develop drink water!!!
+                 case 6: {
+                    for (bool r = true ; r == true;) {
+                        int chs = 0;
+                    cout << " You currently have the following water sources to explore: "<< endl << endl;
+                    std::this_thread::sleep_for(std::chrono::microseconds(500));
+                    cout << "1. a river (+35 drink, but can cause you to have a stomachache -5 health )" << endl << endl;
+                    std::this_thread::sleep_for(std::chrono::microseconds(500));
+                    cout << "2. Headwater stream on a rocky mountain ( +40 drink , - 15 stamina )" << endl << endl;
+                    std::this_thread::sleep_for(std::chrono::microseconds(500));
+                    cout << "3. dew collector ( + 5 / machine ), you have: " << water_mc << endl << endl;
+                    std::this_thread::sleep_for(std::chrono::microseconds(1500));
+                    cout << endl;
 
-             }
-         } //switch
+                    cout<<"I want: ";
+                    cin >> chs;
+
+                    switch (chs) {
+                        case 1 : {
+                            cout << "\r finding."<< flush;
+                            std::this_thread::sleep_for(std::chrono::microseconds(1500));
+                            cout << "\r finding.."<< flush;
+                            std::this_thread::sleep_for(std::chrono::microseconds(1500));
+                            cout << "\r finding..."<< flush;
+                            std::this_thread::sleep_for(std::chrono::microseconds(1500));
+                            cout << "\r finded!     "<< endl;
+                            cout << "you drinked water of the river (water + 35, health - 5)"<< endl << endl;
+                            Ingam.drink += 35;
+                            Ingam.health -= 5;
+                            
+                            break;
+
+                        }
+                        case 2 : {
+                            uniform_int_distribution<int> roll(1, 3);
+                                int spin = roll(quay);
+                            if ( Ingam.stamina >= 15) {
+                                if ( spin == 1) {
+                                    cout << "\r finding."<< flush;
+                                    std::this_thread::sleep_for(std::chrono::microseconds(1500));
+                            cout << "\r finding.."<< flush;
+                            std::this_thread::sleep_for(std::chrono::microseconds(1500));
+                            cout << "\r finding..."<< flush;
+                            std::this_thread::sleep_for(std::chrono::microseconds(1500));
+                            cout << "\r finded!     "<< endl;
+                            std::this_thread::sleep_for(std::chrono::microseconds(1500));
+                                    cout << "you drinked water of headwater stream on a rocky mountain (water + 40, stamina - 15), it cool!"<< endl << endl;
+                                } else if (spin == 2) {
+                                    cout <<  "you drinked water of headwater stream on a rocky mountain (water + 40, stamina - 15), very natural"<< endl << endl;
+                                } else if (spin == 3) {
+                                    cout <<  "you drinked water of headwater stream on a rocky mountain (water + 40, stamina - 15), truly well-deserved"<< endl << endl;
+                                }
+
+                                Ingam.drink +=  40;
+                                Ingam .stamina -= 15;
+                                r = false;
+
+                            } else {
+                                cout << "you not have enought stamina..." << endl << endl;
+                                cout << endl << endl;
+                                
+                            }
+                            break;
+                        }
+                        case 3 : {
+                            if ( water_mc > 0 ) {
+                                cout << "\r drinking."<< flush;
+                                std::this_thread::sleep_for(std::chrono::microseconds(1500));
+                            cout << "\r drinking.."<< flush;
+                            std::this_thread::sleep_for(std::chrono::microseconds(1500));
+                            cout << "\r drinking..."<< endl;
+                            std::this_thread::sleep_for(std::chrono::microseconds(1500));
+                                cout << "you drink "<< water_mc <<" dew collector ( "<< water_mc*5 << " water )" << endl << endl;
+                                Ingam.drink += water_mc * 5;
+                                r = false;
+                            } else {
+                                cout <<  " you not have any machine..."<< endl << endl;
+                            }
+                            
+                            break;
+                        }
+                     }
+                     if ( Ingam.health <= 0) {
+                        cout << "you die...";
+                        i = false;
+                     }
+                     
+                    }
+                    break;
+                 } // case 6
+                 case 7 : {
+                    cout << "your metrics: "<< endl;
+                    cout << "health: "<< Ingam.health << endl;
+                    std::this_thread::sleep_for(std::chrono::microseconds(900));
+                    cout << "food: "<< Ingam.food<< endl;
+                    std::this_thread::sleep_for(std::chrono::microseconds(900));
+                    cout << "drink: "<< Ingam.drink<< endl;
+                    std::this_thread::sleep_for(std::chrono::microseconds(900));
+                    cout << "stamina: "<< Ingam.stamina<< endl;
+                    cout << endl;
+                    break;
+                 }
+                 case 8: {
+                    cout << "your inventory:";
+                    cout << "fruit / food :"<<endl;
+                    cout << "Lingonberries / Mountain Cranberries: "<< ling_inventor<< endl;
+                    std::this_thread::sleep_for(std::chrono::microseconds(900));
+                    cout << "Mayhaws: "<< may_inventor<< endl;
+                    std::this_thread::sleep_for(std::chrono::microseconds(900));
+                    cout << "Muscadine: "<< mus_inventor<< endl;
+                    std::this_thread::sleep_for(std::chrono::microseconds(900));
+                    cout << "Mulberries: "<< mul_inventor<< endl;
+                    std::this_thread::sleep_for(std::chrono::microseconds(900));
+                    cout << "Raspberries: "<< ras_inventor<< endl;
+                    std::this_thread::sleep_for(std::chrono::microseconds(900));
+                    cout << "Meat: "<< meat<< endl;
+                    std::this_thread::sleep_for(std::chrono::microseconds(900));
+                    cout << "Cooked meat: "<< cm_inventor<< endl;
+                    std::this_thread::sleep_for(std::chrono::microseconds(900));
+
+                    cout<< " ore / resources: "<< endl;
+                    cout << "Stone: "<< stone_inventor << endl;
+                    std::this_thread::sleep_for(std::chrono::microseconds(900));
+                    cout << "Copper: "<< copper_inventor<< endl;
+                    std::this_thread::sleep_for(std::chrono::microseconds(900));
+                    cout << "Bauxite: "<< bauxite_inventor << endl;
+                    std::this_thread::sleep_for(std::chrono::microseconds(900));
+                    cout << "Coal: "<< coal_inventor<< endl;
+                    std::this_thread::sleep_for(std::chrono::microseconds(900));
+                    cout << "Iron: "<< iron_inventor << endl;
+                    std::this_thread::sleep_for(std::chrono::microseconds(900));
+                    cout << "Graphite: "<< graphite_inventor << endl;
+                    std::this_thread::sleep_for(std::chrono::microseconds(900));
+                    cout << "KNO3: "<< kno_inventor  << endl;
+                    std::this_thread::sleep_for(std::chrono::microseconds(900));
+                    cout << "Diamond "<< diamond_inventor << endl;   //crazy diamond!
+                    std::this_thread::sleep_for(std::chrono::microseconds(900));
+                    cout << "Wood: "<< go_inventor << endl;
+
+                    cout << " durability / weapon / item:" << endl;
+                    cout << boolalpha ;
+                    cout << "sword "<< sword << endl;
+                    std::this_thread::sleep_for(std::chrono::microseconds(900));
+                    cout << "Gun "<< gun << endl;
+                    std::this_thread::sleep_for(std::chrono::microseconds(900));
+                    cout << "Pickaxe "<< pickaxe << endl;
+                    std::this_thread::sleep_for(std::chrono::microseconds(900));
+                    cout << "axe "<< axe << endl;
+                    std::this_thread::sleep_for(std::chrono::microseconds(900));
+                    cout << "bandage: "<< band_inventor << endl;
+                    std::this_thread::sleep_for(std::chrono::microseconds(900));
+                    cout << "Ammor "<< ammor_inventor << endl;
+                    std::this_thread::sleep_for(std::chrono::microseconds(900));
+                    cout << "sword durability: "<< sword_dura << endl;
+                    std::this_thread::sleep_for(std::chrono::microseconds(900));
+                    cout << "gun durability: "<< gun_dura << endl;
+                    
+
+                 }
+
+             } // switch
+         } // for loop
 }
 // long long ling_inventor  long long may_inventor  long long mus_inventor  long long mul_inventor  long long ras_inventor   meat  cm_inventor
-// Ingam.health  Ingam.stamina  Ingam.food  Ingam.drink bauxite_inventor KNO_inventor diamond_inventor graphite_inventor coal_inventor stone_inventor iron_inventor go_inventor bandage_inventor copper_inventor ammor_inventor fruit_inventor meat sword_dura gun_dura sword gun bandage pickaxe axe w_hit b_hit choose so quay so_luong go so_quang so_dao may_man may chon_quai battle bhea whea behea x choose_bt hit hitting bear_hitting
+// Ingam.health  Ingam.stamina  Ingam.food Ingam.drink 
+// bauxite_inventor kno_inventor diamond_inventor graphite_inventor coal_inventor stone_inventor iron_inventor go_inventor copper_inventor 
+// ammor_inventor  sword_dura gun_dura  sword  gun  bandage  pickaxe  axe  w_hit  b_hit choose so quay so_luong go so_quang so_dao may_man may chon_quai battle bhea whea behea x choose_bt hit hitting bear_hitting
 // Text-based Adventure
 // joke: my friend (Thang) love furry C:
 return 0;
